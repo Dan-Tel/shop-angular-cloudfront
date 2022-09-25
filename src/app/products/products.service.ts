@@ -64,6 +64,9 @@ export class ProductsService extends ApiService {
     }
 
     const url = this.getUrl('bff', 'products');
+    console.log(this.http.get<Product[]>('/assets/products.json'));
+    console.log(this.http.get<Product[]>(url));
+
     return this.http.get<Product[]>(url);
   }
 
